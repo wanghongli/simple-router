@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  simple_Router
+//
+//  Created by sunrise on 2018/11/3.
+//  Copyright © 2018 sunriseos. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "SRBaseController.h"
+#import "UIViewController+PageRouter.h"
+
+
+#define sr_StringIsEmpty(string) (string == nil  || !(string.length > 0) \
+|| [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0)
+#define sr_StringIsNotEmpty(string) (string != nil  || string.length > 0 \
+|| [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] > 0)
+
+
+#endif /* PrefixHeader_pch */
